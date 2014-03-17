@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html ng-app="plunker">
+
+  <head>
+    <meta charset="utf-8" />
+    <title>AngularJS Plunker</title>
+    <script>document.write('<base href="' + document.location + '" />');</script>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="angular-snap.css" type="text/css" />
+    <script src="snap.js" type="text/javascript" charset="utf-8"></script>
+    <script data-require="angular.js@1.2.x" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.4/angular.min.js" data-semver="1.2.4"></script>
+    <script src="angular-snap.js" type="text/javascript" charset="utf-8"></script>
+    <script src="app.js"></script>
+  </head>
+
+  <body ng-controller="MainCtrl">
+    <snap-drawer>
+      <p>Hello from drawer!</p>
+    </snap-drawer>
+    
+    <snap-content>
+      <p>Hello {{name}}!</p>
+      <p>This plunk uses angular-snap@{{snapVersion}}</p>
+      <button snap-toggle>Toggle</button>
+    </snap-content>
+  </body>
+
+</html>
