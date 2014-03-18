@@ -1,19 +1,73 @@
-/* Swipe works with mouse as well but often causes text selection. */
-#demo-page * {
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    -o-user-select: none;
-    user-select: none;
-}
-/* Content styling. */
-dl { font-family: "Times New Roman", Times, serif; padding: 1em; }
-dt { font-size: 2em; font-weight: bold; }
-dt span { font-size: .5em; color: #777; margin-left: .5em; }
-dd { font-size: 1.25em; margin: 1em 0 0; padding-bottom: 1em; border-bottom: 1px solid #eee; }
-.back-btn { float: right; margin: 0 2em 1em 0; }
-
 snap-content {
-  background-color: #fff;
+  background-color: #fAf;
   border-left: 1px solid #ccc;
+}
+
+body {
+	background-color: #fff;
+}
+
+
+
+.header {
+	position:absolute;
+	top:0; left:0; right:0;
+	height:50px; line-height: 50px;
+	color:#000;
+	text-transform: uppercase;
+	text-align: center;
+	background-color: #F90;
+}
+
+.nav {
+	position: absolute;
+	bottom: 0; left: 0; right: 0;
+	height: 40px; line-height: 40px;
+	text-align: center;
+	background-color: #fff;
+
+}
+
+.nav a{
+	display: block;
+	width: 50%;
+	float: left;
+
+}
+
+button {
+	position: absolute;
+	left :0;
+    background: transparent;
+    border: none !important;
+    font-size:0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.icon-menu {
+	background-image: url(img/icon-menu.png);
+	width: 60px;
+}
+
+.panel {
+	position: absolute;
+	top: 0; left: 0, right: 0; bottom: 0;
+	overflow-x: hidden;
+	overflow-y: scroll;
+	-webkit-overflow-scrolling: touch;
+}
+.panel-padding {
+	padding: 0 25px;
 }
