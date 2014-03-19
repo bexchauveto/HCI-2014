@@ -13,17 +13,20 @@
         <script src="js/snap.js" type="text/javascript"></script>
         <script src="js/angular-snap.js" type="text/javascript"></script>
         <script src="js/app.js" type="text/javascript"></script>
+        <script src="js/angular-route-1.2.4.min.js" type="text/javascript"></script>
     </head>
     
     <body ng-controller="MainCtrl">
 
-        <nav snap-drawer class="nav">
-            <a href="#home">Home</a><br />
-            <a href="#mySchedule">My Schedule</a><br />
-            <a href="#info">HCI Info</a><br />
-            <a href="#people">People</a><br />
-            <a href="#map">Map</a><br />
-            <a href="#about">About us</a>
+        <nav snap-drawer>
+            <ul class="list">
+                <li><a href="#/home" ng-click="menu='home'" ng-class="{active: menu=='home'}">Home</a></li>
+                <li><a href="#mySchedule" ng-click="menu='mySchedule'" ng-class="{active: menu=='mySchedule'}">My Schedule</a></li>
+                <li><a href="#info" ng-click="menu='info'" ng-class="{active: menu=='info'}">HCI Info</a></li>
+                <li><a href="#people" ng-click="menu='people'" ng-class="{active: menu=='people'}">People</a></li>
+                <li><a href="#map" ng-click="menu='map'" ng-class="{active: menu=='map'}">Map</a></li>
+                <li><a href="#about" ng-click="menu='about'" ng-class="{active: menu=='about'}">About us</a></li>
+            </ul>
         </nav>
 
         <snap-content snap-options="opts"> 

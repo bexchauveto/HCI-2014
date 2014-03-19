@@ -1,11 +1,17 @@
-var route = angular.module('app', []);
+//Define an angular module for our app
+var route = angular.module('app', ['ngRoute']);
 
+//Define Routing for app
+//Uri /home -> template home.html
 route.config(['$routeProvider', function($routeProvider) {
     $routeProvider
+        .when('/', {templateUrl: 'partials/home.html'})
         .when('/home', {templateUrl: 'partials/home.html'})
         .when('/about', {templateUrl: 'partials/about.html'})
         .otherwise({redirectTo: '/home'})
 }]);
+
+
 
 var ap = angular.module('app', ['snap']);
 
