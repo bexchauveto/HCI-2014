@@ -1,28 +1,25 @@
 //Define an angular module for our app
-var route = angular.module('app', ['ngRoute']);
+var ap = angular.module('app', ['ngRoute', 'snap']);
 
 //Define Routing for app
 //Uri /home -> template home.html
-route.config(['$routeProvider', function($routeProvider) {
+ap.config(['$routeProvider', function($routeProvider) {
     $routeProvider
-        .when('/', {templateUrl: 'partials/home.html'})
         .when('/home', {templateUrl: 'partials/home.html'})
+        .when('/mySchedule', {templateUrl: 'partials/mySchedule.html'})
+        .when('/info', {templateUrl: 'partials/info.html'})
+        .when('/people', {templateUrl: 'partials/people.html'})
+        .when('/map', {templateUrl: 'partials/map.html'})
         .when('/about', {templateUrl: 'partials/about.html'})
         .otherwise({redirectTo: '/home'})
 }]);
 
-
-
-var ap = angular.module('app', ['snap']);
-
 ap.controller('MainCtrl', function($scope) {
+    $scope.menu = 'home';
     $scope.opts = {
         disable: 'right'
     };
 });
-
-
-
 
 
 

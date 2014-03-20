@@ -4,7 +4,7 @@ snap-content {
 }
 
 body {
-	background-color: #fff;
+	background-color: #faf;
 }
 
 .header {
@@ -26,7 +26,8 @@ button {
 }
 
 .active {
-	border-top: 3px solid #F90;
+	/*border-top: 3px solid #F90;*/
+	background-color: #5DBCD2;
 }
 
 .list {
@@ -61,6 +62,11 @@ nav, li {
 
 
 
+.content {
+	position: absolute;
+	top: 50px; right:0; bottom: 0; left: 0;
+	margin: 10px;
+}
 
 
 
